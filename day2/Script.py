@@ -101,6 +101,24 @@ print(res)
 secondRes= lastNumber-int(lastNumber);
 print(secondRes);   
 
-#challenge: 
+#challenge: Rewrite the previous task with the least possible number of characters.
+
+#print(round(res,2)); 
+#print(round(secondRes,2));
+print(format(res,('.2f')));
+print(format(secondRes,(".2f")));
+
+#task 4.1
+
+precision = 1
+for _ in range(30):
+    print(1/precision)
+    precision += 2
+
+pi = π = 4 * (1/1 - 1/3 + 1/5 - 1/7+1/9);
+
+print(format(pi,(".2f")));
+
+#task 4.1
 
 
