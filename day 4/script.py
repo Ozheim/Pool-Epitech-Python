@@ -96,3 +96,62 @@ cnt += 1
 
 #task 2.5
 
+
+for i in range ( 99, 0, -1) : 
+    if(i==1):
+        print( "{} bottle of beer on the wall., {}  bottle of beer. Take one down, pass it around, {}  bottle of beer on the wall.".format(i,i,i))
+    else: 
+        print( "{} bottles of beer on the wall., {}  bottles of beer. Take one down, pass it around, {}  bottles of beer on the wall.".format(i,i,i-1))
+
+
+#task 2.6 
+
+def functionForThis(trying, n):
+    i=0
+    while i < n : 
+        if i <n :
+           i += trying
+        print(i)
+       
+        
+        if i>n :
+            ("bon")
+        else:
+            ("stop2")
+    
+    for i in range (0,n): 
+        i = i +  1 
+
+trying = int(input("test something : "))
+n= int(input("give me ur max : "))
+while trying * 2 < n:
+    functionForThis(trying, n)   
+    trying+=1
+
+
+#challenge : 
+
+def challenge():
+    ask_int = int(input("Write nbr : "))
+    ask_str = input("Write str : ")
+    vowels = str(["a", "e", "i","o","u","y"])
+    if ask_int == 0:
+        exit(challenge())
+    elif ask_int >= 42:
+            print(ask_int)
+    for vowel in vowels:
+        if vowel in ask_str:
+            print(ask_int)
+       
+    else : print(ask_str)
+challenge()
+ 
+
+
+#task 3.1 
+
+inputEncrypted= str(input("your message:  "))
+inputKey = str(input("you're key: "))
+
+dictionnary = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+
