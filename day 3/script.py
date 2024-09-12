@@ -1,6 +1,6 @@
 #task  1.1 
 
-string= "bigStringToWorkForAnyTask"
+string= "bigstringToWorkForAnyTask"
 
 print(str)
 
@@ -76,11 +76,11 @@ print ( concat )
 
 #task 2.9 
 
-string1 = "42"
+string1 = " 42 "
 string2 = "is"
 string3 = " the answer "
 concat = string1 + string2 + string3 
-print (" The string" + concat + "contain 16 characters).")
+print (" The string " +  concat  + " contain 16 characters.")
 
 #challenge before 3.1 : 
 
@@ -103,12 +103,13 @@ print("hello" ,usernameBis[0].capitalize()+ usernameBis[1:])
 
 #task 3.3
 
-userNameNumOne = input("gimme 2 numbers, first one please : ")
+userNameNumOne = input("give me 2 numbers, first one please : ")
 userNameNumBis= input("second One please : ")
 
 print( "The sum of the two provided numbers is", int(userNameNumOne) + int(userNameNumBis))
 
 #task 3.4 
 
-
+Question = input("give me a number please :")
+print(type(int(Question)))
 
