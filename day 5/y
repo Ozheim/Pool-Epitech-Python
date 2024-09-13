@@ -1,0 +1,32 @@
+student= {"key" : "heikel", "values: ":  "Epitech", }
+
+
+
+
+#task 3.2 
+
+student["units"] = [
+   { "name": "Web Development", "credits": 2, "grade" : "A"},
+    {"name": "Network and System Administrationn"  , "credits": 3, "grade": "B"},
+    {"name": "Java", "credits": 4, "grade": "C"},
+   
+    ]
+   
+
+print(student)
+
+#task 3.3 
+
+grade_weight_mapping=[
+    {"key":"A", "values": 4 },
+    {"key": "B", "Values": 3},
+    {"key": "C", "values": 2},
+    {"key": "D", "values": 1},
+    {"key":"E", "values": 0}
+]
+
+student["name"] = 
+
+student["GPA"] = {"value": "4"}
+
+print()
