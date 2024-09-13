@@ -106,4 +106,59 @@ print([*enumerate([42, 3, 4, 18, 3, 10])]) # ca ajoute un compteur qui commence 
 
 #task 3.1 
 
-s
+student = {
+  "key": "heikel",
+  "values": "Epitech",
+  "units": [
+    {
+      "name": "Web Development",
+      "credits": 2,
+      "grade": "A"
+    },
+    {
+      "name": "Network and System Administration",
+      "credits": 3,
+      "grade": "B"
+    },
+    {
+      "name": "Java",
+      "credits": 4,
+      "grade": "C"
+    } 
+  ],
+}
+
+print(student["units"][0]["grade"])
+    
+x= 0
+for unit in student["units"]:
+    x+= unit["credits"]
+    totalCredit = x 
+    student["total_credit"] = totalCredit
+print(student)
+
+
+#task 3.3 
+
+grade_weight_mapping=[
+    {"key":"A", "values": 4 },
+    {"key": "B", "Values": 3},
+    {"key": "C", "values": 2},
+    {"key": "D", "values": 1},
+    {"key":"E", "values": 0}
+]
+
+student["GPA"]= 9/3
+
+print(student["units"][0]["grade"])
+
+#task 3.4 
+
+arrayOfStudent = [
+    {"name": "Amine", "credits": 5 , "grade": "D"},
+    {"name": "Colin", "credits": 6, "grade": "E"},
+    {"name": "Mohammed", "credits": 7, "grade": "B"}
+]
+        
+    
+    
