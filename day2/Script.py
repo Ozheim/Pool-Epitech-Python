@@ -37,7 +37,7 @@ i = 1
 while i < 10:
     res += int('1'*i)
     i = i + 1
-print(res)
+    print(res)
 
 res = 0
 
