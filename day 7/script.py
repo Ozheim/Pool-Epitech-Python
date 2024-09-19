@@ -1,49 +1,66 @@
 import random
 
+with open("hangman/list.txt", "r") as file:
+    listinFile= file.read()
+    liste = listinFile.split()
+    
+
+with open("hangman/bestScore.txt", "r") as file:
+    bestScore = file.read()
+    if bestScore:
+        bestScore = int(bestScore)
+    else:
+        bestScore = 0
+
 def hangmanGame():
-    liste = ["bronca","hardi","possibilité","cyber","pilori","retrait","poisson-perroquet","verbeux","féminisme","présomption"]
     wordChoice = random.randint(0, 10)
     finalChoice = liste[wordChoice]
-    listOfLetterInWord= list(finalChoice)
+    listOfLetterInWord = list(finalChoice)
     hideList = ['_'] * len(listOfLetterInWord)
     print(''.join(hideList))
     letterTried = []
-    numberOfTry = 0  
-
-    while "_" in hideList and numberOfTry<20:
+    numberOfTry = 0
+    
+   
+    while "_" in hideList and numberOfTry < 20:
         askingUser = input("Essaye une lettre : ").lower()
 
         if askingUser in letterTried:
-            print("Oups, tu as déjà essayé cette lettre ! +3 pénalité ")
-            numberOfTry += 3 
+            print("Oups, tu as déjà essayé cette lettre ! +3 pénalité")
+            numberOfTry += 3
             continue
 
         letterTried.append(askingUser)
-        print("".join(letterTried))
+        print("Lettres essayées : ", " ".join(letterTried))
 
         if askingUser in listOfLetterInWord:
             print("Bien joué !")
             for i, letter in enumerate(listOfLetterInWord):
-                if listOfLetterInWord[i] == askingUser:
+                if letter == askingUser:
                     hideList[i] = letter
             print(''.join(hideList))
-        
-        elif askingUser == listOfLetterInWord: 
-            print("bravo !! ")
-
-        
         else:
             print("Non ! +3 pénalité")
             numberOfTry += 3
+            print(numberOfTry)
+    
 
-gameFinished = print(input(str("felicitation ! veux-tu rejouer? ")))
-if gameFinished == "oui" or gameFinished ==" Oui" or gameFinished == "OUI": 
-    print("c'est parti ! :) ") 
-    hangmanGame()
-else: 
-    print("A bientot")
+    if "_" not in hideList:
+        print("Félicitations, tu as gagné !")
+    else:
+        print("Tu as perdu, le mot était :", finalChoice)
+    
+    if numberOfTry < bestScore or bestScore == 0:  
+        print(f"Nouveau meilleur score : {numberOfTry} essais !")
+        with open("hangman/bestScore.txt", "w") as file:
+            file.write(str(numberOfTry))
 
-hangmanGame() 
+    else:
+        print(f"Ton score : {numberOfTry}. Meilleur score actuel : {bestScore}.")
+
+
+hangmanGame()
+
 
 
 

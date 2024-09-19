@@ -7,7 +7,7 @@ clock = pygame.time.Clock()
 running = True
 
 fond = pygame.image.load('hangman/asset/pendaison.jpg')
-screen.blit(fond,(0,0))
+screen.blit(fond,(-50,-200))
 
 while running:
  
