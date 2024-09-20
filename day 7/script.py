@@ -62,9 +62,6 @@ def hangmanGame():
 hangmanGame()
 
 
-
-
-
 # creeer une liste des lettres déja joué et des nombres essaie a realiser 
 # demander une lettre a l'utilisateur 
 # boucler tant que le nibmre d'essaie est inférieur a nombre essaie defini, et que il y a pas de tirer dans hidden word
